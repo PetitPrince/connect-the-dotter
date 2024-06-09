@@ -1,0 +1,15 @@
+.points-list {
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.point-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}

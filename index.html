@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect the Dots Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+
+        .controls {
+            margin: 10px;
+        }
+
+        #pointList {
+            margin-top: 20px;
+            width: 800px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #000;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+
+        .series {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Connect the Dots Generator</h1>
+    <div class="controls">
+        <label for="symbol">Symbol:</label>
+        <select id="symbol">
+            <option value="circle">Circle</option>
+            <option value="star">Star</option>
+            <option value="triangle">Triangle</option>
+        </select>
+        <label for="labelType">Label Type:</label>
+        <select id="labelType">
+            <option value="numeric">1, 2, 3...</option>
+            <option value="alpha">a, b, c...</option>
+            <option value="roman">I, II, III...</option>
+        </select>
+        <input type="checkbox" id="toggleLines">
+        <label for="toggleLines">Toggle Lines</label>
+        <label for="fontSize">Font Size:</label>
+        <input type="number" id="fontSize" value="12">
+        <input type="file" id="backgroundImageInput">
+        <button id="toggleBackground">Toggle Background</button>
+        <button id="addSeries">Add Series</button>
+        <button id="removeSeries">Remove Series</button>
+        <button id="clearCanvas">Clear all</button>
+        <button id="exportJson">Export JSON</button>
+        <button id="importJson">Import JSON</button>
+        <input type="file" id="importJsonFile" style="display:none;">
+        <button id="exportSvg">Export SVG</button>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div id="pointList"></div>
+    <textarea id="jsonOutput" rows="10" cols="50" readonly></textarea>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
